@@ -1,58 +1,58 @@
 ## p.12
 AaT+@H	nm	あなた(男)
-HiyA		彼女
-RoA_SH		頭
-A@B		父
-B+aYiT		家
-G+aG		屋根
-G'+aZ		ジャズ
+HiyA	pron	彼女
+RoA_SH	n	頭
+A@B	nm	父
+B+aYiT	n	家
+G+aG	n	屋根
+G'+aZ	n	ジャズ
 
 ## p.13
-D+eLeT		戸
-B+eGeD		服
-HaR		山
-K+iT+@H		教室
-L@H+		彼女に
+D+eLeT	n	戸
+B+eGeD	n	服
+HaR	n	山
+K+iT+@H	n	教室
+L@H+	pron	彼女に
 G+@BoAH+	a	高い
-D+@ViD		ダビデ
-G+uwP		体
-B+owR		穴
-V@SHiyN:G+:TTowN		ワシントン
+D+@ViD	Nm	ダビデ
+G+uwP	n	体
+B+owR	n	穴
+V@SHiyN:G+:TTowN	N	ワシントン
 
 ## p.14
-Z@H@B		金
-Z'uwR:N@L		ジャーナル(journal)
-H/aG		祭
+Z@H@B	n	金
+Z'uwR:N@L	n	ジャーナル(journal)
+H/aG	n	祭
 TTowB	a	善い
 AowTTowM@TTiy	a	自動の
-Y@D		手
+Y@D	n	手
 
 ## p.15
-HiyA		彼女は
+HiyA	pron	彼女は
 A@KaL	v	食べる
-D+eReK:		道
-K+@BowD		栄光
-LeB		心
-MaYiM		水
-N@BiyA		預言者
-B+eeN		息子
-SSuwSS		馬
+D+eReK:	n	道
+K+@BowD	n	栄光
+LeB	n	心
+MaYiM	n	水
+N@BiyA	n	預言者
+B+eeN	nm	息子
+SSuwSS	n	馬
 
 ## p.16
-EaL		上に
+EaL	n	上に
 Y@PeH	a	美しい
-SSowP		終わり
-P+eH		口
-TSeeL		影
-H/uwTS		外
-TS'eL+ow		チェロ
-QowP		猿
+SSowP	n	終わり
+P+eH	n	口
+TSeeL	n	影
+H/uwTS	n	外
+TS'eL+ow	n	チェロ
+QowP	n	猿
 
 ## p.17
-ReGeL		足
-SHeeN		歯
-S@K@R		報酬
-T+owR@H		律法
+ReGeL	n	足
+SHeeN	n	歯
+S@K@R	n	報酬
+T+owR@H	n	律法
 
 ## p.18
 SS@PaR	v	数える
@@ -69,40 +69,40 @@ SSaP+iyR	nm	サファイア
 ###
 
 ## p.21
-B+@A		*
-A@B		*
-S@R@H		サラ
-YiTS:H/@Q		イサク
-D+@ViD		ダビデ
-V+_MoSHeH		*
-AaB:R@H@M		アブラハム
+#B+@A		*
+#A@B		*
+S@R@H	Nf	サラ
+YiTS:H/@Q	Nm	イサク
+D+@ViD	Nm	ダビデ
+# UMoSHeH		*
+AaB:R@H@M	Nm	アブラハム
 
-Y:RuwSH@LaYiM		エルサレム
-Y:RiyH/ow		イェリコ
+Y:RuwSH@LaYiM	N	エルサレム
+Y:RiyH/ow	N	イェリコ
 
-AeGeD		束
-QoDeSH		聖
+AeGeD	n	束
+QoDeSH	n	聖
 
 ## p.22
 
-A@BiyB		春
-A@BiyV		彼の父
-AiM		もし〜ならば
-EiM		〜と共に
-AaL		〜でない
-EaL		〜の上に
-AowR		光
-EowR		皮膚
-A@H/		兄弟
-AaK:		しかし
+A@BiyB	n	春
+A@BiyV	n	彼の父
+AiM	conj	もし〜ならば
+EiM	prep	〜と共に
+AaL	prep	〜でない
+EaL	prep	〜の上に
+AowR	n	光
+EowR	n	皮膚
+A@H/	n	兄弟
+AaK:	conj	しかし
 
 ## p.23
 
-K+aR		枕
+K+aR	n	枕
 QaR	a	寒い
-K+oL		すべて
-QowL		声
-SSaM		麻薬
+K+oL	adv	すべて
+QowL	n	声
+SSaM	n	麻薬
 S@M	v	置く
 TT@E@H	v	誤る
 T+@E@H	v	道に迷う
@@ -122,94 +122,94 @@ SS@EaD	v	助ける
 
 B+@KiyR	a	(位が)上級の
 B+@HiyR	a	澄んだ
-H/owRiyM		穴
-HowRiyM		両親
+H/owRiyM	n	穴
+HowRiyM	n	両親
 H/iL+eeL	v	冒瀆する
 HiL+eeL	v	賛美する
-H/eeN		優美
-HeeN		彼女らは
-L@KeM		あなたたちへ
-L@HeM		彼らに
+H/eeN	n	優美
+HeeN	pron	彼女らは
+L@KeM	pron	あなたたちへ
+L@HeM	pron	彼らに
 
 ## p.25
 
-R:H/owB		通り
-M:NaHeeL		社長,校長
-T+:HiL+iyM		詩篇
-HaL:Luw		賛美せよ
-AaB:R@H@M		アブラハム
-MaH/:B+eReT		ノート
-YiTS:H/@Q		イサク
+R:H/owB	n	通り
+M:NaHeeL	n	社長,校長
+T+:HiL+iyM	n	詩篇
+HaL:Luw	*	賛美せよ
+AaB:R@H@M	Nm	アブラハム
+MaH/:B+eReT	n	ノート
+YiTS:H/@Q	Nm	イサク
 
 ## p.26
 
-M:NowR@H		メノラー,燭台
-Y:L@DiyM		子供たち
-MeLeK:		王
-AaT+:		あなた(女)は
-L@BaSH:T+:		あなた(女)は着た
-NeeP:TT:		石油
+M:NowR@H	n	メノラー,燭台
+Y:L@DiyM	n	子供たち
+MeLeK:	n	王
+AaT+:	pron	あなた(女)は
+L@BaSH:T+:	*	あなた(女)は着た
+NeeP:TT:	n	石油
 MiSS:K+eeN	a	かわいそうな
-MiD:B+@R		荒野
-YiSH:M:Ruw		彼らは守るであろう
-NiSS:G+:Ruw		それらは閉じられた
-YiR:M:Y@Huw		エレミヤ
-AeQ:SS:P+owR:TT		輸出
-HaL:LuwY@H+		ハレルヤ,主を賛めよ
-HiN:Nuw		見よ,私たちは
-D+iB+:Ruw		彼らは語った
+MiD:B+@R	n	荒野
+YiSH:M:Ruw	*	彼らは守るであろう
+NiSS:G+:Ruw	*	それらは閉じられた
+YiR:M:Y@Huw	Nm	エレミヤ
+AeQ:SS:P+owR:TT	n	輸出
+HaL:LuwY@H+	*	ハレルヤ,主を賛めよ
+HiN:Nuw	*	見よ,私たちは
+D+iB+:Ruw	*	彼らは語った
 
 ## p.27
 
-TS:LiyL		音色
-K+:NeSSeT		会合
-G+:LiyD@H		アイスクリーム
+TS:LiyL	n	音色
+K+:NeSSeT	n	会合
+G+:LiyD@H	n	アイスクリーム
 
-Aa:Niy		私は
-Ea:BowD@H		仕事
+Aa:Niy	pron	私は
+Ea:BowD@H	n	仕事
 
-TSiP+o:RiyM		鳥たち
-SHiB+o:LiyM		(麦の)穂
-H/o:D@SHiyM		月々
+TSiP+o:RiyM	n	鳥たち
+SHiB+o:LiyM	n	(麦の)穂
+H/o:D@SHiyM	n	月々
 
 ## p.28
 
-H/a:BiyL@H		小包み
-HeAe:MiyN		信じる
-HeH/e:ZiyR		返す
-HeEe:L@H		上げる
-Ao:NiY+@H		船
+H/a:BiyL@H	n	小包み
+HeAe:MiyN	v	信じる
+HeH/e:ZiyR	v	返す
+HeEe:L@H	v	上げる
+Ao:NiY+@H	n	船
 
-B+aYiT		家
-MaL:B+eeN		長方形
-K+aP		手のひら
-MaZ:K+iyR		秘書,書記
-P+eH		口
-MiR:P+eSSeT		ベランダ
+B+aYiT	n	家
+MaL:B+eeN	n	長方形
+K+aP	n	手のひら
+MaZ:K+iyR	n	秘書,書記
+P+eH	n	口
+MiR:P+eSSeT	n	ベランダ
 
 ## p.29
 
-SHaB+@T		安息日
-MiL+eeA		満たす
-HaSH+@MaYiM		天,空
+SHaB+@T	n	安息日
+MiL+eeA	v	満たす
+HaSH+@MaYiM	n	天,空
 
-SSiP+uwR		物語
-P+iL:P+eeL		ピーマン
+SSiP+uwR	n	物語
+P+iL:P+eeL	n	ピーマン
 
-AuL:P+@N		ヘブライ語教室
-H@AuL:P+@N		そのヘブライ語教室
-EiyR		町
-H@EiyR		その町
+AuL:P+@N	n	ヘブライ語教室
+H@AuL:P+@N	n	そのヘブライ語教室
+EiyR	n	町
+H@EiyR	n	その町
 
 ## p.30
 
 H/ay	adj	生きている
 AuwLay	adv	多分
-SSiyNay		シナイ
-Aa:DoN@y		わが主
+SSiyNay	N	シナイ
+Aa:DoN@y	n	わが主
 
-G+oy		民、異邦人
-Aoy		ああ！
+G+oy	n	民、異邦人
+Aoy	*	ああ！
 
 G+@Luy	a	あらわな
 R@TSuy	a	望ましい
@@ -217,115 +217,115 @@ M@TSuy	a	ありふれた
 
 ## p.31
 
-B+aN+aay		建設労働者
-B+:VaD+aay		もちろん
-EiT+owNaay		記者
-K+:Daay		〜する価値がある
+B+aN+aay	n	建設労働者
+B+:VaD+aay	adv	もちろん
+EiT+owNaay	n	記者
+K+:Daay	v	〜する価値がある
 
-B+@N@yv		彼の息子たち
-AeH/@yv		彼の兄弟たち
+B+@N@yv	n	彼の息子たち
+AeH/@yv	n	彼の兄弟たち
 
-T+aP+uwAH/		りんご
-M@SHiyAH/		メシア
-YowDeeAE		知っている
-HiG+iyAE		到着した
+T+aP+uwAH/	n	りんご
+M@SHiyAH/	n	メシア
+YowDeeAE	v	知っている
+HiG+iyAE	v	到着した
 G+@BoAH+	a	高い
 
 ## p.32
 
-H/@K:M@H		知恵
-Q@R:B+@N		犠牲
-T+@K:NiyT		計画
+H/@K:M@H	n	知恵
+Q@R:B+@N	n	犠牲
+T+@K:NiyT	n	計画
 
-K+@L-H@A@ReTS		全地
+K+@L-H@A@ReTS	n	全地
 
-M@H/o:R@T		翌日
-TS@Ho:RaYiM		正午,昼
-SH@R@SHiyM		根
-Q@D@SHiyM		聖
+M@H/o:R@T	n	翌日
+TS@Ho:RaYiM	n	正午,昼
+SH@R@SHiyM	n	根
+Q@D@SHiyM	n	聖
 
 ## p.33
 
-MeLeK:		王
-YeLeD		男の子
-SSeePeR		本
-SSeeMeL		象徴
+MeLeK:	n	王
+YeLeD	n	男の子
+SSeePeR	n	本
+SSeeMeL	n	象徴
 
-M:L@KiyM		王たち
-SS:P@RiyM		本(複数)
+M:L@KiyM	n	王たち
+SS:P@RiyM	n	本(複数)
 
-MaH/:B+eReT		ノート
-MowLeDeT		祖国
+MaH/:B+eReT	n	ノート
+MowLeDeT	n	祖国
 
 ## p.34
 
-LowMeDeT		(彼女は)勉強します
-M:DaB+eReT		(彼女は)話します
-T+eeKeP		すぐに
-B+:EeeReK:		およそ、約
+LowMeDeT	v	(彼女は)勉強します
+M:DaB+eReT	v	(彼女は)話します
+T+eeKeP	adv	すぐに
+B+:EeeReK:	adv	およそ、約
 
-P+eTaH/		人口
-NeeTSaH/		永遠
-ZeRaE		種
-SSeLaE		岩
+P+eTaH/	n	人口
+NeeTSaH/	n	永遠
+ZeRaE	n	種
+SSeLaE	n	岩
 
-B+oQeR		朝
-QoDeSH		聖
-AoHeL		天幕
+B+oQeR	n	朝
+QoDeSH	n	聖
+AoHeL	n	天幕
 
-A@LeP		アレフ
-D+@LeT		ダレット
-M@VeT		死
+A@LeP	n	アレフ
+D+@LeT	n	ダレット
+M@VeT	n	死
 
 ## p.35
 
-P+aH/aD		恐れ
-B+aEaL		主人,夫
-MiQ:LaH/aT		シャワー
-YowDaEaT		(彼女は)知っている
+P+aH/aD	n	恐れ
+B+aEaL	n	主人,夫
+MiQ:LaH/aT	n	シャワー
+YowDaEaT	v	(彼女は)知っている
 
-QaYiTS		夏
-B+aYiT		家
-ZaYiT		オリーブ
-EaYiN		目
+QaYiTS	n	夏
+B+aYiT	n	家
+ZaYiT	n	オリーブ
+EaYiN	n	目
 
-SH@MaYiM		天,空
-Y@DaYiM		両手
+SH@MaYiM	n	天,空
+Y@DaYiM	n	両手
 
-TTeLePowN		電話
-AowTTowB+uwSS		バス
+TTeLePowN	n	電話
+AowTTowB+uwSS	n	バス
 
-AiyN:P:LaTS:Y@H		インフレ
+AiyN:P:LaTS:Y@H	n	インフレ
 
 ## p.36
 
-AiyN:TTeN:SSiyBiy		集中的な
-T+eyAaTT:RowN		劇場
+AiyN:TTeN:SSiyBiy	a	集中的な
+T+eyAaTT:RowN	n	劇場
 
 ## p.38
 
-SH@LowM MaR 〜		(男の人に)こんにちは、〜さん。
-SH@LowM G+:BeReT 〜		(女の人に)こんにちは、〜さん。
-B+oQeR TTowB		お早ようございます。
-B+oQeR AowR		(返事)お早ようございます。
-EeReB TTowB		今晩は。
-LaY:L@H TTowB		お休みなさい。
-MaH SH+:LowM:K@		(男の人に)お元気ですか。
-MaH SH+:LowMeeK:		(女の人に)お元気ですか。
-SH:LowMiy TTowB		(返事,男女とも)私は元気です。
-T+owD@H RaB+@H		大変ありがとうございます。
-EaL LoA D+@B@R		どういたしまして。
-SS:LiyH/@H		すみません;失礼ですが。
-B+:BaQ+@SH@H		どうぞ;どういたしまして。
-B+@RuwK: HaB+@A		よくいらっしゃいました。
-L:H/aY+iyM		乾杯！
-B+:TeeA@BowN		どうぞお召し上がり下さい。
-MaZ+@L TTowB		おめでとう。
-H/aG S@MeeAH/		お祭りおめでとう。
-SHaB+aT SH@LowM		安息日に平安がありますように。
-LiB:RiyAuwT		(病人やくしゃみをした人に)お大事に;体に気をつけて。
-B+:HaTS:L@H/@H		ご成功を祈ります。
-L:HiT:R@AowT		また会いましょう。
+SH@LowM MaR 〜	*	(男の人に)こんにちは、〜さん。
+SH@LowM G+:BeReT 〜	*	(女の人に)こんにちは、〜さん。
+B+oQeR TTowB	*	お早ようございます。
+B+oQeR AowR	*	(返事)お早ようございます。
+EeReB TTowB	*	今晩は。
+LaY:L@H TTowB	*	お休みなさい。
+MaH SH+:LowM:K@	*	(男の人に)お元気ですか。
+MaH SH+:LowMeeK:	*	(女の人に)お元気ですか。
+SH:LowMiy TTowB	*	(返事,男女とも)私は元気です。
+T+owD@H RaB+@H	*	大変ありがとうございます。
+EaL LoA D+@B@R	*	どういたしまして。
+SS:LiyH/@H	*	すみません;失礼ですが。
+B+:BaQ+@SH@H	*	どうぞ;どういたしまして。
+B+@RuwK: HaB+@A	*	よくいらっしゃいました。
+L:H/aY+iyM	*	乾杯！
+B+:TeeA@BowN	*	どうぞお召し上がり下さい。
+MaZ+@L TTowB	*	おめでとう。
+H/aG S@MeeAH/	*	お祭りおめでとう。
+SHaB+aT SH@LowM	*	安息日に平安がありますように。
+LiB:RiyAuwT	*	(病人やくしゃみをした人に)お大事に;体に気をつけて。
+B+:HaTS:L@H/@H	*	ご成功を祈ります。
+L:HiT:R@AowT	*	また会いましょう。
 
 ## p.43
 
@@ -376,50 +376,221 @@ ReGeL	nf	足
 AeReTS	nf	国
 EiyR	nf	都市
 
-YiS:R@AeeL	nf	イスラエル
-YaP+@N	nf	日本
-Y:RuwSH@LaYiM	nf	エルサレム
-TTowQ:Yow	nf	東京
+YiS:R@AeeL	Nf	イスラエル
+YaP+@N	Nf	日本
+Y:RuwSH@LaYiM	Nf	エルサレム
+TTowQ:Yow	Nf	東京
 
 ## p.46
 
-MoSHeH		モーセ
-MiR:Y@M		マリア
+MoSHeH	Nm	モーセ
+MiR:Y@M	Nf	マリア
 
-AaB:R@H@M		アブラハム
-YiTS:H/@Q		イサク
-YaEa:QoB		ヤコブ
-D+@ViD		ダビデ
-SH:LoMoH		ソロモン
-S@R@H		サラ
-RiB:Q@H		リベカ
-R@H/eeL		ラケル
-H/aN+@H		ハンナ,ハナ
-SHowSHaN+@H		スザンナ
+AaB:R@H@M	Nm	アブラハム
+YiTS:H/@Q	Nm	イサク
+YaEa:QoB	Nm	ヤコブ
+D+@ViD	Nm	ダビデ
+SH:LoMoH	Nm	ソロモン
+S@R@H	Nf	サラ
+RiB:Q@H	N	リベカ
+R@H/eeL	N	ラケル
+H/aN+@H	N	ハンナ,ハナ
+SHowSHaN+@H	Nf	スザンナ
 
-H/eyP@H		ハイファ
-T+eeL-A@BiyB		テルアビブ
-Y:RiyH/ow		エリコ
-B+eyT-LeH/eM		ベツレヘム
+H/eyP@H	N	ハイファ
+T+eeL-A@BiyB	N	テルアビブ
+Y:RiyH/ow	N	エリコ
+B+eyT-LeH/eM	N	ベツレヘム
 
 ## p.47
 
-Aa:Niy		私は
-AaT+@H		あなた(男)は
-AaT+:		あなた(女)は
-HuwA		彼は
-HiyA		彼女は
+Aa:Niy	pron	私は
+AaT+@H	pron	あなた(男)は
+AaT+:	pron	あなた(女)は
+HuwA	pron	彼は
+HiyA	pron	彼女は
 
-Aa:NaH/:Nuw		私たちは
-A@Nuw		私たちは
-AaT+eM		あなたがた(男)は
-AaT+eN		あなたがた(女)は
-HeeM		彼らは
-HeeN		彼女らは
+Aa:NaH/:Nuw	pron	私たちは
+A@Nuw	pron	私たちは
+AaT+eM	pron	あなたがた(男)は
+AaT+eN	pron	あなたがた(女)は
+HeeM	pron	彼らは
+HeeN	pron	彼女らは
 
 ## p.48
 
 K+eeN	adv	はい
 LoA	adv	いいえ,〜でない
 G+aM	conj	〜もまた
+
+## p.49
+
+HaAiM	q	(疑問文を導き)〜ですか
+
+## p.50
+
+#T+aL:MiyDiyM	nm	生徒(複数)
+#T+aL:MiyDowT	nf	女生徒(複数)
+
+## p.51
+T+aL:MiyD	nm	生徒(男)
+T+aL:MiyDiyM	nf	生徒(女)
+T+aL:MiyD@H	nm+	生徒たち(男)
+T+aL:MiyDowT	nf+	生徒たち(女)
+
+SHiyR	nm	歌
+SHiyRiyM	nm+	歌(複数)
+SSuwSS	nm	馬
+SSuwSSiyM	nm+	馬(複数)
+B+@H/uwR	nm	男子青年
+B+aH/uwRiyM	nm+	男子青年(複数)
+
+## p.52
+
+YeLeD	nm	男児,子供
+Y:L@DiyM	nm+	男児,子供(複数)
+SSeePeR	nm	本
+SS:P@RiyM	nm+	本(複数)
+B+eGeD	nm	服
+B+:G@DiyM	nm+	服(複数)
+MowReH	nm	先生
+MowRiyM	nm+	先生(複数)
+H/owLeH	nm	病人
+H/owLiyM	nm+	病人(複数)
+
+H/a:BeeR@H	nf	女友達
+H/a:BeeRowT	nf+	女友達(複数)
+MowR@H	nf	女子教員
+MowRowT	nf+	女子教員(複数)
+YaL:D+@H	nf	女の子
+Y:L@DowT	nf+	女の子たち
+T+:MuwN@H	nf	絵,写真
+T+:MuwNowT	nf+	絵,写真(複数)
+
+MaH/:B+eReT	nf	ノート
+MaH/:B+@RowT	nf+	ノート(複数)
+RaK+eBeT	nf	列車
+RaK+@BowT	nf+	列車(複数)
+TSaL+aH/aT	nf	皿
+TSaL+@H/owT	nf+	皿(複数)
+
+K+aP+iyT	nf	小さじ
+K+aP+iY+owT	nf+	小さじ(複数)
+M:KowNiyT	nf	自動車
+M:KowNiY+owT	nf+	自動車(複数)
+
+## p.53
+
+Z:KuwT	nf	権利
+Z:KuY+owT	nf+	権利(複数)
+H/a:NuwT	nf	店
+H/a:NuY+owT	nf+	店(複数)
+
+SSeePeR	n	本
+HaSS+eePeR	*	その本
+MowR@H	nf	女子教員
+HaM+owR@H	*	その女子教員
+T+aL:MiyDiyM	n+	生徒たち
+HaT+aL:MiyDiyM	*	その生徒たち
+T+:MuwNowT	n	絵
+HaT+:MuwNowT	*	その絵
+
+## p.54
+
+YowN@T@N	Nm	ヨナタン
+AiM+@A	nf	母
+
+MoSHeH	Nm	モーセ
+LeH/eM	nm	パン
+B@S@R	nm	肉
+#PeH		口
+#T:MuwN@H		絵
+
+## p.54
+
+D+@ViD	Nm	ダビデ
+YowN@T@N	Nm	ヨナタン
+MowReH	nm	先生
+#TaL:MiyDiyM	nm	生徒たち
+AaB+@A	nm	父
+AiM+@A	nf	母
+
+LeH/eM	nm	パン
+B+@S@R	nm	肉
+AoZeN	nf	耳
+P+eH	nm	口
+SSeePeR	n	本
+T:MuwN@H	n	絵
+
+ZeH	pron	これ,この人(男性単数)
+AeeL+eH	pron	これら,この人たち(複数)
+ZoA_T	pron	これ,この人(女性単数)
+Zow	pron	これ,この人(女性単数)
+
+## p.55
+
+Miy	q	誰
+MaH	q	何
+
+## p.56
+
+H/@BeeR	nm	友
+B+eeN	nm	息子,子
+B+aH/uwR@H	nf	若い女性,乙女
+Ae:LoHiyM	nm	神
+
+## p.57
+
+AeSS:T+eeR	Nf	エステル
+
+## p.58
+
+RuwT	Nf	[女の名]ルツ
+
+## p.59
+
+TowB	a	良い
+G+@DowL	a	大きい
+Q@TT@N	a	小さい
+H/@D@SH	a	新しい
+Y@PeH	a	美しい
+
+## p.61
+
+AaH/eeR	a	他の
+MeR:K+@Ziy	a	中心の
+
+MiS:R@D	nm	事務所,官庁
+T+aH/a:N@H	nf	駅
+
+## p.62
+
+Z@QeeN	a	年老いた
+
+## p.63
+
+B+oQeR	nm	朝
+EeReB	nm	夕方,晩
+SH@BuwAE	nm	週
+MaZ+@L	nm	運
+SH@N@H	nf	年
+SH@E@H	nf	時,時間
+SSiyM@N	nm	印,徴
+N:SSiyE@H	nf	旅行
+
+## p.64
+
+D+@G	nm	魚
+Ea:BowD@H	nf	仕事
+MiL+owN	nm	辞書
+EeeTT	nm	ペン
+
+## p.66
+
+HiN+eeH	*	見よ
+N@EiyM	a	楽しい,快い
+SHeBeT	v	[inf]座ること
+A@H/	nm	兄弟
+YaH/aD	adv	一緒に
+
 

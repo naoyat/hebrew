@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import re
 import textutil
+from latin import cv_split, cv_unsplit
 
 HEBREW_UC_TABLE = [
     # 0590
@@ -109,6 +110,128 @@ HEBREW_LETTER_FINAL = {
     u'\u05E6': u'\u05E5',
 }
 
+HEBREW_UNLIGATURE_TABLE = [
+    # \uFB1D 〜 \uFB4F
+    u'\u05D9\u05B4', # FB1D יִ HEBREW LETTER YOD WITH HIRIQ
+    u'\u05BF',       # FB1E $ﬞ HEBREW POINT JUDEO-SPANISH VARIKA
+                     # a glyph variant of 05BF 
+    u'\u05F2\u05B7', # FB1F ײַ HEBREW LIGATURE YIDDISH YOD YOD PATAH
+    u'\u05E2',       # FB20 ע HEBREW LETTER ALTERNATIVE AYIN
+                     # this form of AYIN has no descender,
+                     # for use with marks placed below the letter
+    u'\u05D0',       # FB21 א HEBREW LETTER WIDE ALEF
+    u'\u05D3',       # FB22 ד HEBREW LETTER WIDE DALET
+    u'\u05D4',       # FB23 ה HEBREW LETTER WIDE HE
+    u'\u05DB',       # FB24 כ HEBREW LETTER WIDE KAF
+    u'\u05DC',       # FB25 ל HEBREW LETTER WIDE LAMED
+    u'\u05DD',       # FB26 ם HEBREW LETTER WIDE FINAL MEM
+    u'\u05E8',       # FB27 ר HEBREW LETTER WIDE RESH
+    u'\u05EA',       # FB28 ת HEBREW LETTER WIDE TAV
+    u'+',            # FB29 ﬩ HEBREW LETTER ALTERNATIVE PLUS SIGN
+    u'\u05E9\u05C1', # FB2A שׁ HEBREW LETTER SHIN WITH SHIN DOT
+    u'\u05E9\u05C2', # FB2B שׂ HEBREW LETTER SHIN WITH SIN DOT
+    #u'\uFB49\u05C1', # FB2C שּׁ HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+    u'\u05E9\u05BC\u05C1', # FB2C שּׁ HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+    #u'\uFB49\u05C2', # FB2D שּׂ HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+    u'\u05E9\u05BC\u05C2', # FB2D שּׂ HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+    u'\u05D0\u05B7', # FB2E אַ HEBREW LETTER ALEF WITH PATAH
+    u'\u05D0\u05B8', # FB2F אָ HEBREW LETTER ALEF WITH QAMATS
+    u'\u05D0\u05BC', # FB30 אּ HEBREW LETTER ALEF WITH MAPIQ
+    u'\u05D1\u05BC', # FB31 בּ HEBREW LETTER BET WITH DAGESH
+    u'\u05D2\u05BC', # FB32 גּ HEBREW LETTER GIMEL WITH DAGESH
+    u'\u05D3\u05BC', # FB33 דּ HEBREW LETTER DALET WITH DAGESH
+    u'\u05D4\u05BC', # FB34 הּ HEBREW LETTER HE WITH MAPIQ
+    u'\u05D5\u05BC', # FB35 וּ HEBREW LETTER VAV WITH DAGESH
+    u'\u05D6\u05BC', # FB36 זּ HEBREW LETTER ZAYIN WITH DAGESH
+    u'\uFB37',       # FB37 " <reserved>
+    u'\u05D8\u05BC', # FB38 טּ HEBREW LETTER TET WITH DAGESH
+    u'\u05D9\u05BC', # FB39 יּ HEBREW LETTER YOD WITH DAGESH
+    u'\u05DA\u05BC', # FB3A ךּ HEBREW LETTER FINAL KAF WITH DAGESH
+    u'\u05DB\u05BC', # FB3B כּ HEBREW LETTER KAF WITH DAGESH
+    u'\u05DC\u05BC', # FB3C לּ HEBREW LETTER LAMED WITH DAGESH
+    u'\uFB3D',       # FB3D " <reserved>
+    u'\u05DE\u05BC', # FB3E מּ HEBREW LETTER MEM WITH DAGESH
+    u'\uFB3F',       # FB3F " <reserved>
+    u'\u05E0\u05BC', # FB40 נּ HEBREW LETTER NUN WITH DAGESH
+    u'\u05E1\u05BC', # FB41 סּ HEBREW LETTER SAMEKH WITH DAGESH
+    u'\uFB42',       # FB42 " <reserved>
+    u'\u05E3\u05BC', # FB43 ףּ HEBREW LETTER FINAL PE WITH DAGESH
+    u'\u05E4\u05BC', # FB44 פּ HEBREW LETTER PE WITH DAGESH
+    u'\uFB45',       # FB45 " <reserved>
+    u'\u05E6\u05BC', # FB46 צּ HEBREW LETTER TSADI WITH DAGESH
+    u'\u05E7\u05BC', # FB47 קּ HEBREW LETTER QOF WITH DAGESH
+    u'\u05E8\u05BC', # FB48 רּ HEBREW LETTER RESH WITH DAGESH
+    u'\u05E9\u05BC', # FB49 שּ HEBREW LETTER SHIN WITH DAGESH
+    u'\u05D5\u05B9', # FB4B וֹ HEBREW LETTER VAV WITH HOLAM
+    u'\u05D1\u05BF', # FB4C בֿ HEBREW LETTER BET WITH RAFE
+    u'\u05DB\u05BF', # FB4D כֿ HEBREW LETTER KAF WITH RAFE
+    u'\u05E4\u05BF', # FB4E פֿ HEBREW LETTER PE WITH RAFE
+    u'\u05D0\u05DC', # FB4F אל HEBREW LIGATURE ALEF LAMED
+]
+
+HEBREW_LIGATURE_TABLE = [
+    (u'\u05D9\u05B4', u'\uFB1D'), # יִ HEBREW LETTER YOD WITH HIRIQ
+    #(u'\u05BF', u'\uFB1E') # $ﬞ HEBREW POINT JUDEO-SPANISH VARIKA
+                     # a glyph variant of 05BF 
+    (u'\u05F2\u05B7', u'\uFB1F'), # ײַ HEBREW LIGATURE YIDDISH YOD YOD PATAH
+    #(u'\u05E2', u'\uFB20') # ע HEBREW LETTER ALTERNATIVE AYIN
+                     # this form of AYIN has no descender,
+                     # for use with marks placed below the letter
+    (u'\u05E9\u05C1', u'\uFB2A'), # שׁ HEBREW LETTER SHIN WITH SHIN DOT
+    (u'\u05E9\u05C2', u'\uFB2B'), # שׂ HEBREW LETTER SHIN WITH SIN DOT
+    # (u'\uFB49\u05C1', u'\uFB2C'), # שּׁ HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+    (u'\u05E9\u05BC\u05C1', u'\uFB2C'), # שּׁ HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+    # (u'\uFB49\u05C2', u'\uFB2D'), # שּׂ HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+    (u'\u05E9\u05BC\u05C2', u'\uFB2D'), # שּׂ HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+    (u'\u05D0\u05B7', u'\uFB2E'), # אַ HEBREW LETTER ALEF WITH PATAH
+    (u'\u05D0\u05B8', u'\uFB2F'), # אָ HEBREW LETTER ALEF WITH QAMATS
+    (u'\u05D0\u05BC', u'\uFB30'), # אּ HEBREW LETTER ALEF WITH MAPIQ
+    (u'\u05D1\u05BC', u'\uFB31'), # בּ HEBREW LETTER BET WITH DAGESH
+    (u'\u05D2\u05BC', u'\uFB32'), # גּ HEBREW LETTER GIMEL WITH DAGESH
+    (u'\u05D3\u05BC', u'\uFB33'), # דּ HEBREW LETTER DALET WITH DAGESH
+    (u'\u05D4\u05BC', u'\uFB34'), # הּ HEBREW LETTER HE WITH MAPIQ
+    (u'\u05D5\u05BC', u'\uFB35'), # וּ HEBREW LETTER VAV WITH DAGESH
+    (u'\u05D6\u05BC', u'\uFB36'), # זּ HEBREW LETTER ZAYIN WITH DAGESH
+    (u'\uFB37',       u'\uFB37'), # " <reserved>
+    (u'\u05D8\u05BC', u'\uFB38'), # טּ HEBREW LETTER TET WITH DAGESH
+    (u'\u05D9\u05BC', u'\uFB39'), # יּ HEBREW LETTER YOD WITH DAGESH
+    (u'\u05DA\u05BC', u'\uFB3A'), # ךּ HEBREW LETTER FINAL KAF WITH DAGESH
+    (u'\u05DB\u05BC', u'\uFB3B'), # כּ HEBREW LETTER KAF WITH DAGESH
+    (u'\u05DC\u05BC', u'\uFB3C'), # לּ HEBREW LETTER LAMED WITH DAGESH
+    (u'\uFB3D',       u'\uFB3D'), # " <reserved>
+    (u'\u05DE\u05BC', u'\uFB3E'), # מּ HEBREW LETTER MEM WITH DAGESH
+    (u'\uFB3F',       u'\uFB3F'), # " <reserved>
+    (u'\u05E0\u05BC', u'\uFB40'), # נּ HEBREW LETTER NUN WITH DAGESH
+    (u'\u05E1\u05BC', u'\uFB41'), # סּ HEBREW LETTER SAMEKH WITH DAGESH
+    (u'\uFB42',       u'\uFB42'), # " <reserved>
+    (u'\u05E3\u05BC', u'\uFB43'), # ףּ HEBREW LETTER FINAL PE WITH DAGESH
+    (u'\u05E4\u05BC', u'\uFB44'), # פּ HEBREW LETTER PE WITH DAGESH
+    (u'\uFB45',       u'\uFB45'), # " <reserved>
+    (u'\u05E6\u05BC', u'\uFB46'), # צּ HEBREW LETTER TSADI WITH DAGESH
+    (u'\u05E7\u05BC', u'\uFB47'), # קּ HEBREW LETTER QOF WITH DAGESH
+    (u'\u05E8\u05BC', u'\uFB48'), # רּ HEBREW LETTER RESH WITH DAGESH
+    (u'\u05E9\u05BC', u'\uFB49'), # שּ HEBREW LETTER SHIN WITH DAGESH
+    (u'\u05D5\u05B9', u'\uFB4B'), # וֹ HEBREW LETTER VAV WITH HOLAM
+    (u'\u05D1\u05BF', u'\uFB4C'), # בֿ HEBREW LETTER BET WITH RAFE
+    (u'\u05DB\u05BF', u'\uFB4D'), # כֿ HEBREW LETTER KAF WITH RAFE
+    (u'\u05E4\u05BF', u'\uFB4E'), # פֿ HEBREW LETTER PE WITH RAFE
+    (u'\u05D0\u05DC', u'\uFB4F'), # אל HEBREW LIGATURE ALEF LAMED
+]
+
+
+def unligature(text):
+    return u''.join([
+        HEBREW_UNLIGATURE_TABLE[ord(ch)-0xFB1D] if 0xFB1D <= ord(ch) <= 0xFB4F else ch
+        for ch in text
+        ])
+
+
+def ligature(text):
+    # naive impl.
+    for before, after in HEBREW_LIGATURE_TABLE:
+        text = text.replace(before, after)
+    return text
+
 
 def parse_hebrew_word(word):
     chars = [ord(uc) for uc in word]
@@ -150,38 +273,12 @@ def parse_hebrew_word(word):
         parts.append( (c, v) )
     # print parts
 
-    if all([v is None for c,v in parts]):
-        lat = ''.join([c + '_' for c,v in parts])
-    else:
-        lat = ''.join([c + (v or '_') for c,v in parts])
-
-    # long vowels with Y/V/A
-    lat = lat.replace('iY_', 'iy')
-    lat = lat.replace('oV_', 'ow')
-    # lat = lat.replace('oA_', 'oa')
-    lat = lat.replace('_V+_', 'uw')
-    lat = lat.replace('aY_', 'ay')
-    lat = lat.replace('aA_Y_', 'aay')
-    lat = lat.replace('@Y_V_', '@yv')
-    lat = lat.replace('@Y_', '@y')
-    lat = lat.replace('eeY_', 'ey')
-    lat = lat.replace('owY_', 'oy')
-    lat = lat.replace('uwY_', 'uy')
-    # furtive patah
-    lat = re.sub(r'H\+a$', 'AH+', lat)
-    lat = re.sub(r'Ea$', 'AE', lat)
-    lat = re.sub(r'H/a$', 'AH/', lat)
-
-    if len(lat) > 0 and lat[-1] == '_':
-        lat = lat[:-1]
-
-    # print lat
-    return lat
+    return cv_unsplit(parts)
 
 
-def trans_latin_to_hebrew(parts, with_vowel=False):
+def latin_parts_to_hebrew(parts, with_vowel=True):
     buf = []
-    l = len(parts)
+    last = len(parts) - 1
     # print parts
     for i, (c, v) in enumerate(parts):
         if c[-1] == '+':
@@ -196,7 +293,7 @@ def trans_latin_to_hebrew(parts, with_vowel=False):
             dashed = False
         # print c, dotted, v
         hc = HEBREW_LETTER.get(c, u'?')
-        if i == l-1:
+        if i == last:
             hc = HEBREW_LETTER_FINAL.get(hc, hc)
         buf.append(hc)
         if dotted:
@@ -214,61 +311,30 @@ def trans_latin_to_hebrew(parts, with_vowel=False):
         if dashed:
             buf.append(u'\u05F3')
 
-        if with_vowel and v:
-            hv = HEBREW_POINT.get(v, u'?')
-            buf.append(hv)
+        if with_vowel:
+            if v:
+                hv = HEBREW_POINT.get(v, u'?')
+                buf.append(hv)
+            elif i == last and c == 'K':
+                hv = HEBREW_POINT[':']
+                buf.append(hv)
+
     # print ['%4x' % ord(uc) for uc in u''.join(buf)]
     return u''.join(buf)
 
 
-def parse_latin_word(word, with_vowel=False, debug=False):
-    parts = []
-    # furtive patah
-    word = word.replace('AH+', 'H+a').replace('AE', 'Ea').replace('AH/', 'H/a')
-
-    word = word.replace('-', '-_')
-
-    word = word.replace('iy', 'iY_')
-    word = word.replace('uy', 'uwY_')
-    word = word.replace('oy', 'owY_')
-    # word = word.replace('ow', 'oV_')
-    # word = word.replace('oa', 'oA_')
-    word = word.replace('uw', '_V+_')
-    word = word.replace('aay', 'aA_Y_')
-    word = word.replace('ay', 'aY_')
-    word = word.replace('@yv', '@Y_V_')
-    word = word.replace('@y', '@Y_')
-
-    # print word
-    i = 0
-    while True:
-        mo = re.match('[-A-Z+/\']+', word[i:])
-        if not mo: break
-        c = mo.group(0)
-        if len(c) >= 2 and c[-1] == '-':
-            parts.append( (c[:-1], None) )
-            c = '-'
-            v = None
-        i += mo.end()
-
-        mo = re.match('([^-A-Z+/]|_)+', word[i:])
-        if mo:
-            v = mo.group(0)
-            i += mo.end()
-        else:
-            v = None
-        parts.append( (c,v) )
-
+def parse_latin_word(word, with_vowel=True, debug=False):
+    parts = cv_split(word)
     if debug:
         print parts
 
-    hs = trans_latin_to_hebrew(parts, with_vowel=with_vowel)
+    hs = latin_parts_to_hebrew(parts, with_vowel=with_vowel)
     return hs
 
 
-def parse_latin_text(latin_text, with_vowel=False, debug=False):
-    return textutil.text_trans(lambda word: parse_latin_word(word, with_vowel=with_vowel, debug=debug), latin_text)
-
-
-def parse_hebrew_text(hebrew_text, vowel=False):
+def parse_hebrew_text(hebrew_text, with_vowel=True):
     return textutil.text_trans(parse_hebrew_word, hebrew_text)
+
+
+def parse_latin_text(latin_text, with_vowel=True, debug=False):
+    return textutil.text_trans(lambda word: parse_latin_word(word, with_vowel=with_vowel, debug=debug), latin_text)

@@ -1,13 +1,89 @@
+# 第４課　名詞と代名詞(1)
+# p.48
+# §4-5 名詞文
 
 MoSHeH
 SH@LowM. Aa:Niy MoSHeH. AaT+: T+aL:MiyD@H?
-
 H/aN+@H
 K+eeN, Aa:Niy T+aL:MiyD@H. G+aM AaT+@H T+aL:MiyD?
-
 MoSHeH
 LoA, Aa:Niy LoA T+aL:MiyD. Aa:Niy MowReH.
 
 Aa:Niy LoA MoSHeH.
-
 H/aN+@H LoA T+aL:MiyD@H.
+
+# p.49
+
+AaT+: T+aL:MiyD@H?
+HaAiM AaT+@H T+aL:MiyD?
+
+K+eeN, Aa:Niy T+aL:MiyD@H.
+LoA, Aa:Niy LoA T+aL:MiyD@H.
+
+AaT+@H LoA T+aL:MiyD.
+K+eeN, Aa:Niy T+aL:MiyD.
+LoA, Aa:Niy LoA T+aL:MiyD.
+
+# 第５課　名詞と代名詞(2)
+# p.51
+
+Aa:NaH/:Nuw T+aL:MiyDiyM.
+G+aM HeeN T+aL:MiyDowT.
+
+## p.54
+
+D+@ViD V:YowN@T@N
+MowReH V:TaL:MiyDiyM
+AaB+@A V:AiM+@A
+
+D+@ViD UMoSHeH
+LeH/eM UB@S@R
+AoZeN UPeH
+SSeePeR UT:MuwN@H
+
+ZeH MoSHeH.
+ZoA_T T+:MuwN@H.
+
+## p.55
+
+AeeL+eH D+@ViD V:YowN@T@N.
+AeeL+eH T+aL:MiyDowT.
+
+Miy ZeH?
+Miy ZoA_T?
+Miy AeeL+eH?
+
+MaH Z+eH?
+M@H AeeL+eH?
+ZoA_T MaH/:B+eReT.
+
+HaSS+eePeR HaZ+eH
+HaT+aL:MiyD@H HaZ+oA_T
+HaT+aL:MiyDiyM H@AeeL+eH
+
+## p.56
+
+MoSHeH HuwA T+aL:MiyD.
+H/aN+@H HiyA MowR@H.
+AaT+@H HuwA H@Ae:LoHiyM.
+D+@ViD V:YowN@T@N HeeM H/a:BeeRiyM.
+
+B+eeN : AaB+@A, MaH Z+eH?
+AaB+@A : ZoA_T T+:MuwN@H.
+B+eeN : Miy ZeH?
+AaB+@A : ZeH MoSHeH. HuwA MowReH.
+B+eeN : Miy HaB+aH/uwR@H HaZ+oA_T?
+AaB+@A : ZoA_T H/aN+@H. HiyA T+aL:MiyD@H.
+B+eeN : UMiy AeeL+eH?
+AaB+@A : AeeL+eH YiTS:H/@Q USH:LoMoH. HeeM T+aL:MiyDiyM.
+B+eeN : V:GaM AeeL+eH T+aL:MiyDowT?
+AaB+@A : LoA. S@R@H V:AeSS:T+eeR LoA T+aL:MiyDowT. HeeN MowRowT.
+
+# 第６課　形容詞
+## p.59
+
+T+aL:MiyD TTowB
+T+aL:MiyD@H TTowB@H
+T+aL:MiyDiyM TTowBiyM
+T+aL:MiyDowT TTowBowT
+
