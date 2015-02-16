@@ -66,9 +66,11 @@ def cv_unsplit(parts):
     lat = lat.replace('owY_', 'oy')
     lat = lat.replace('uwY_', 'uy')
     # furtive patah
-    lat = re.sub(r'H\+a$', 'AH+', lat)
-    lat = re.sub(r'Ea$', 'AE', lat)
-    lat = re.sub(r'H/a$', 'AH/', lat)
+    if len(lat) > 2:
+        lat = re.sub(r'Ea$', 'AE', lat)
+        if len(lat) > 3:
+            lat = re.sub(r'H\+a$', 'AH+', lat)
+            lat = re.sub(r'H/a$', 'AH/', lat)
 
     lat = re.sub(r'K:$', 'K', lat)
     lat = re.sub(r'^V\+_', 'U', lat)

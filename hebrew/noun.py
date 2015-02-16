@@ -1,16 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from hebrew import guess_word_form, LATIN_FORM
+# from hebrew import guess_word_form, LATIN_FORM
 from hebrew.latin import cv_split, cv_unsplit
 
+DEBUG = False
 
-def plural_form(lat_sg, debug=False):
-#    assert isinstance(lat_sg, unicode)
-    assert guess_word_form(lat_sg) == LATIN_FORM
+def plural_form(lat_sg):
+    # assert isinstance(lat_sg, unicode)
+    # assert guess_word_form(lat_sg) == LATIN_FORM
 
     parts = cv_split(lat_sg)
 
-    if debug:
+    if DEBUG:
         print ">", lat_sg
 
     is_female_form = False
@@ -64,7 +65,7 @@ def plural_form(lat_sg, debug=False):
             if base[-1][0][-1] == '+':
                 base[-1][0] = base[-1][0][:-1]
 
-    if debug:
+    if DEBUG:
         print base
 
     if is_female_form:
@@ -76,18 +77,18 @@ def plural_form(lat_sg, debug=False):
         base[-1][1] = 'i'
         base += [['Y', None], ['M', None]]
 
-    if debug:
+    if DEBUG:
         print base
 
     dest_lat = cv_unsplit(base)
-    if debug:
+    if DEBUG:
         print dest_lat
 
     return dest_lat
 
 
-def ha_article(lat_without_ha, debug=False):
-    assert guess_word_form(lat_without_ha) == LATIN_FORM
+def affix_ha_article(lat_without_ha):
+    # assert guess_word_form(lat_without_ha) == LATIN_FORM
 
     # 固有名詞なら ha- をつけずに返す処理をしたい
 
@@ -96,14 +97,37 @@ def ha_article(lat_without_ha, debug=False):
         parts[1][0] += '+'
 
     lat_with_ha = cv_unsplit(parts)
-    if debug:
+    if DEBUG:
         print lat_with_ha
 
     return lat_with_ha
 
 
-def with_ve(lat_without_ve, debug=False):
-    assert guess_word_form(lat_without_ve) == LATIN_FORM
+def unfix_ha_article(lat_with_ha):
+    # assert guess_word_form(lat_with_ha) == LATIN_FORM
+
+    # 固有名詞なら ha- をつけずに返す処理をしたい
+    parts = cv_split(lat_with_ha)
+    if parts[0] != ['H', 'a']:
+        return False, lat_with_ha
+
+    parts = parts[1:]
+
+    if parts[0][0][-1] == '+':
+        parts[0][0] = parts[0][0][:-1] # そうでない場合もある
+        # ここ、辞書を見るなりしてチェックしないと駄目だ
+        # T+aL:MiyDiyM
+        # T+MuwNowT
+
+    lat_without_ha = cv_unsplit(parts)
+    if DEBUG:
+        print lat_without_ha
+
+    return True, lat_without_ha
+
+
+def affix_ve(lat_without_ve):
+    # assert guess_word_form(lat_without_ve) == LATIN_FORM
 
     parts = cv_split(lat_without_ve)
     if parts[0][0] in ('B+', 'K+', 'P+'):
@@ -116,9 +140,38 @@ def with_ve(lat_without_ve, debug=False):
 
     lat_with_ve = cv_unsplit(parts)
 
-    if debug:
+    if DEBUG:
         print lat_with_ve
 
     return lat_with_ve
 
 
+def unfix_ve(lat_with_ve):
+    parts = cv_split(lat_with_ve)
+    assert len(parts) >= 2
+
+    if parts[0] not in (['V+', None], ['V', ':']):
+        # raise "you don't have to do this"
+        # return lat_with_ve
+        return False, lat_with_ve
+
+    if parts[1][0] in ('B', 'V', 'M', 'P') or parts[1][1] == ':':
+        u_start = True
+    else:
+        u_start = False
+
+    if parts[0] == ['V+', None]: # u-
+        assert u_start
+    else: # ve-
+        assert not u_start
+
+    if parts[1][0] in ('B', 'K', 'P'):
+        parts[1][0] += '+'
+
+    parts = parts[1:]
+    lat_without_ve = cv_unsplit(parts)
+
+    if DEBUG:
+        print lat_without_ve
+
+    return True, lat_without_ve

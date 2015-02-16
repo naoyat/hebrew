@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from hebrew.noun import *
 from nose.tools import eq_, ok_, with_setup
+from tests import weak_eq_
 
 
 def test_plural_form():
@@ -39,9 +40,9 @@ def test_plural_form():
     T('H/a:NuwT', 'H/a:NuY+owT') # 店
 
 
-def test_ha_article():
+def test_affix_ha_article():
     def T(lat_without_ha, lat_with_ha):
-        eq_(lat_with_ha, ha_article(lat_without_ha))
+        eq_(lat_with_ha, affix_ha_article(lat_without_ha))
 
     T('SSeePeR', 'HaSS+eePeR')
     T('MowR@H', 'HaM+owR@H')
@@ -49,15 +50,43 @@ def test_ha_article():
     T('T+:MuwNowT', 'HaT+:MuwNowT')
 
 
-def test_with_ve():
+def test_unfix_ha_article():
+    def T(lat_with_ha, expected_lat_without_ha):
+        is_affixed, lat_without_ha = unfix_ha_article(lat_with_ha)
+        eq_(True, is_affixed)
+        weak_eq_(expected_lat_without_ha, lat_without_ha)
+
+    T('HaSS+eePeR', 'SSeePeR')
+    T('HaM+owR@H', 'MowR@H')
+    T('HaT+aL:MiyDiyM', 'T+aL:MiyDiyM')
+    T('HaT+:MuwNowT', 'T+:MuwNowT')
+
+
+def test_affix_ve():
     def T(lat_without_ve, lat_with_ve):
-        eq_(lat_with_ve, with_ve(lat_without_ve))
+        weak_eq_(lat_with_ve, affix_ve(lat_without_ve))
 
     T('YowN@T@N', 'V:YowN@T@N')
     T('TaL:MiyDiyM', 'V:TaL:MiyDiyM')
     T('AiM+@A', 'V:AiM+@A')
 
-    T('MoSHeH', 'V+_MoSHeH')
-    T('B@S@R', 'V+_B@S@R')
-    T('P+eH', 'V+_PeH')
-    T('T+:MuwN@H', 'V+_T:MuwN@H')
+    T('MoSHeH', 'UMoSHeH')
+    T('B+@S@R', 'UB@S@R')
+    T('P+eH', 'UPeH')
+    T('T+:MuwN@H', 'UT:MuwN@H') ## dagesh removed
+
+
+def test_unfix_ve():
+    def T(lat_with_ve, expected_lat_without_ve):
+        is_affixed, lat_without_ve = unfix_ve(lat_with_ve)
+        eq_(True, is_affixed)
+        weak_eq_(expected_lat_without_ve, lat_without_ve)
+
+    T('V:YowN@T@N', 'YowN@T@N')
+    T('V:TaL:MiyDiyM', 'TaL:MiyDiyM')
+    T('V:AiM+@A', 'AiM+@A')
+
+    T('UMoSHeH', 'MoSHeH')
+    T('UB@S@R', 'B+@S@R')
+    T('UPeH', 'P+eH')
+    T('UT:MuwN@H', 'T+:MuwN@H') ## dagesh revived

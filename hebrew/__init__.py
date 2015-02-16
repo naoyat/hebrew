@@ -3,6 +3,7 @@
 import re
 import textutil
 import hebrew.translit
+from hebrew.noun import unfix_ve
 
 hebdic = {}
 latdic = {}
@@ -65,18 +66,18 @@ def lookup_word_lat(word_lat):
 
     ans = ['#MULTI#']
 
-    ve = False
-    if word_lat[:2] == u'V:':
-        ve = True
-        word_lat = word_lat[2:]
-    elif word_lat[0] == u'U':
-        ve = True
-        word_lat = word_lat[1:]
-        if re.match(r'[BKP]', word_lat):
-            word_lat = word_lat[0] + '+' + word_lat[1:]
-
-    if ve:
+    is_affixed, word_lat = unfix_ve(word_lat)
+    if is_affixed:
         ans.append( (u'V:', 'V:', 'conj', None, u'and') )
+
+#    if word_lat[:2] == u'V:':
+#        ve = True
+#        word_lat = word_lat[2:]
+#    elif word_lat[0] == u'U':
+#        ve = True
+#        word_lat = word_lat[1:]
+#        if re.match(r'[BKP]', word_lat):
+#            word_lat = word_lat[0] + '+' + word_lat[1:]
 
     if latdic.has_key(word_lat):
         ans.append( latdic[word_lat] )
